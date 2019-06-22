@@ -1,0 +1,4 @@
+module game (clk, reset, cima, baixo, esquerda, direita, saída);
+	input clk, reset, cima, baixo, esquerda, direita;
+	input [9:0] linha, coluna;
+	output reg s;

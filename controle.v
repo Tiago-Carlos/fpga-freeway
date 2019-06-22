@@ -1,0 +1,58 @@
+// 4-State Mealy state machine
+
+// A Mealy machine has outputs that depend on both the state and 
+// the inputs.  When the inputs change, the outputs are updated
+// immediately, without waiting for a clock edge.  The outputs
+// can be written more than once per state or per clock cycle.
+
+module controle (
+	input	clk, cima, baixo, esquerda, direita, reset,
+	output reg [3:0] data_out
+);
+
+	// Declare state register
+	reg		[3:0]state;
+	
+	// Declare states
+	parameter S0 = 0, S1 = 1, S2 = 2, S3 = 3;
+	/*
+		S0 = DIREITA
+		S1 = BAIXO
+		S2 = ESQUERDA
+		S3 = CIMA
+	*/
+	
+	// Determine the next state synchronously, based on the
+	// current state and the input
+	always @ (state) begin
+		case (state)
+			S0:
+				data_out = 4'b0011;
+			S1:
+				data_out = 4'b1100;
+			S2:
+				data_out = 4'b0001;
+			S3:
+				data_out = 4'b0100;
+			default:
+				data_out = 4'b0011;
+		endcase
+	end
+	
+	// Determine the output based only on the current state
+	// and the input (do not wait for a clock edge).
+	always @ (posedge clk or posedge reset)
+	begin
+		if (reset) 
+			state <= S0;
+		else
+			if (cima)
+				state <= S3;
+			else if (baixo)
+				state <= S1;
+			else if (esquerda)
+				state <= S2;
+			else if (direita)
+				state <= S0;
+	end
+endmodule

@@ -1,0 +1,789 @@
+|freeway
+Rout <= VGAdrive:inst.Rout
+clock => VGAdrive:inst.clock
+clock => inst3.CLK
+clock => divfreq:inst4.input_clk
+clock => inst8.CLK
+clock => debounce:inst9.clk
+clock => debounce:inst11.clk
+clock => debounce:inst12.clk
+clock => debounce:inst20.clk
+Cima => debounce:inst9.pb_1
+Baixo => debounce:inst11.pb_1
+Esquerda => debounce:inst12.pb_1
+Direita => debounce:inst20.pb_1
+Gout <= VGAdrive:inst.Gout
+Bout <= VGAdrive:inst.Bout
+H <= VGAdrive:inst.H
+V <= VGAdrive:inst.V
+
+
+|freeway|VGAdrive:inst
+clock => horizontal[9].CLK
+clock => horizontal[8].CLK
+clock => horizontal[7].CLK
+clock => horizontal[6].CLK
+clock => horizontal[5].CLK
+clock => horizontal[4].CLK
+clock => horizontal[3].CLK
+clock => horizontal[2].CLK
+clock => horizontal[1].CLK
+clock => horizontal[0].CLK
+clock => vertical[9].CLK
+clock => vertical[8].CLK
+clock => vertical[7].CLK
+clock => vertical[6].CLK
+clock => vertical[5].CLK
+clock => vertical[4].CLK
+clock => vertical[3].CLK
+clock => vertical[2].CLK
+clock => vertical[1].CLK
+clock => vertical[0].CLK
+clock => H~reg0.CLK
+clock => V~reg0.CLK
+clock => row[9]~reg0.CLK
+clock => row[8]~reg0.CLK
+clock => row[7]~reg0.CLK
+clock => row[6]~reg0.CLK
+clock => row[5]~reg0.CLK
+clock => row[4]~reg0.CLK
+clock => row[3]~reg0.CLK
+clock => row[2]~reg0.CLK
+clock => row[1]~reg0.CLK
+clock => row[0]~reg0.CLK
+clock => column[9]~reg0.CLK
+clock => column[8]~reg0.CLK
+clock => column[7]~reg0.CLK
+clock => column[6]~reg0.CLK
+clock => column[5]~reg0.CLK
+clock => column[4]~reg0.CLK
+clock => column[3]~reg0.CLK
+clock => column[2]~reg0.CLK
+clock => column[1]~reg0.CLK
+clock => column[0]~reg0.CLK
+red => Rout.DATAIN
+green => Gout.DATAIN
+blue => Bout.DATAIN
+row[0] <= row[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[1] <= row[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[2] <= row[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[3] <= row[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[4] <= row[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[5] <= row[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[6] <= row[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[7] <= row[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[8] <= row[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[9] <= row[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+column[0] <= column[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+column[1] <= column[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+column[2] <= column[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+column[3] <= column[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+column[4] <= column[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+column[5] <= column[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+column[6] <= column[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+column[7] <= column[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+column[8] <= column[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+column[9] <= column[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Rout <= red.DB_MAX_OUTPUT_PORT_TYPE
+Gout <= green.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= blue.DB_MAX_OUTPUT_PORT_TYPE
+H <= H~reg0.DB_MAX_OUTPUT_PORT_TYPE
+V <= V~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|galinha:inst5
+clk => column_count[31].CLK
+clk => column_count[30].CLK
+clk => column_count[29].CLK
+clk => column_count[28].CLK
+clk => column_count[27].CLK
+clk => column_count[26].CLK
+clk => column_count[25].CLK
+clk => column_count[24].CLK
+clk => column_count[23].CLK
+clk => column_count[22].CLK
+clk => column_count[21].CLK
+clk => column_count[20].CLK
+clk => column_count[19].CLK
+clk => column_count[18].CLK
+clk => column_count[17].CLK
+clk => column_count[16].CLK
+clk => column_count[15].CLK
+clk => column_count[14].CLK
+clk => column_count[13].CLK
+clk => column_count[12].CLK
+clk => column_count[11].CLK
+clk => column_count[10].CLK
+clk => column_count[9].CLK
+clk => column_count[8].CLK
+clk => column_count[7].CLK
+clk => column_count[6].CLK
+clk => column_count[5].CLK
+clk => column_count[4].CLK
+clk => column_count[3].CLK
+clk => column_count[2].CLK
+clk => column_count[1].CLK
+clk => column_count[0].CLK
+clk => row_count[31].CLK
+clk => row_count[30].CLK
+clk => row_count[29].CLK
+clk => row_count[28].CLK
+clk => row_count[27].CLK
+clk => row_count[26].CLK
+clk => row_count[25].CLK
+clk => row_count[24].CLK
+clk => row_count[23].CLK
+clk => row_count[22].CLK
+clk => row_count[21].CLK
+clk => row_count[20].CLK
+clk => row_count[19].CLK
+clk => row_count[18].CLK
+clk => row_count[17].CLK
+clk => row_count[16].CLK
+clk => row_count[15].CLK
+clk => row_count[14].CLK
+clk => row_count[13].CLK
+clk => row_count[12].CLK
+clk => row_count[11].CLK
+clk => row_count[10].CLK
+clk => row_count[9].CLK
+clk => row_count[8].CLK
+clk => row_count[7].CLK
+clk => row_count[6].CLK
+clk => row_count[5].CLK
+clk => row_count[4].CLK
+clk => row_count[3].CLK
+clk => row_count[2].CLK
+clk => row_count[1].CLK
+clk => row_count[0].CLK
+nrst => column_count~32.OUTPUTSELECT
+nrst => column_count~33.OUTPUTSELECT
+nrst => column_count~34.OUTPUTSELECT
+nrst => column_count~35.OUTPUTSELECT
+nrst => column_count~36.OUTPUTSELECT
+nrst => column_count~37.OUTPUTSELECT
+nrst => column_count~38.OUTPUTSELECT
+nrst => column_count~39.OUTPUTSELECT
+nrst => column_count~40.OUTPUTSELECT
+nrst => column_count~41.OUTPUTSELECT
+nrst => column_count~42.OUTPUTSELECT
+nrst => column_count~43.OUTPUTSELECT
+nrst => column_count~44.OUTPUTSELECT
+nrst => column_count~45.OUTPUTSELECT
+nrst => column_count~46.OUTPUTSELECT
+nrst => column_count~47.OUTPUTSELECT
+nrst => column_count~48.OUTPUTSELECT
+nrst => column_count~49.OUTPUTSELECT
+nrst => column_count~50.OUTPUTSELECT
+nrst => column_count~51.OUTPUTSELECT
+nrst => column_count~52.OUTPUTSELECT
+nrst => column_count~53.OUTPUTSELECT
+nrst => column_count~54.OUTPUTSELECT
+nrst => column_count~55.OUTPUTSELECT
+nrst => column_count~56.OUTPUTSELECT
+nrst => column_count~57.OUTPUTSELECT
+nrst => column_count~58.OUTPUTSELECT
+nrst => column_count~59.OUTPUTSELECT
+nrst => column_count~60.OUTPUTSELECT
+nrst => column_count~61.OUTPUTSELECT
+nrst => column_count~62.OUTPUTSELECT
+nrst => column_count~63.OUTPUTSELECT
+nrst => row_count~95.OUTPUTSELECT
+nrst => row_count~94.OUTPUTSELECT
+nrst => row_count~93.OUTPUTSELECT
+nrst => row_count~92.OUTPUTSELECT
+nrst => row_count~91.OUTPUTSELECT
+nrst => row_count~90.OUTPUTSELECT
+nrst => row_count~89.OUTPUTSELECT
+nrst => row_count~88.OUTPUTSELECT
+nrst => row_count~87.OUTPUTSELECT
+nrst => row_count~86.OUTPUTSELECT
+nrst => row_count~85.OUTPUTSELECT
+nrst => row_count~84.OUTPUTSELECT
+nrst => row_count~83.OUTPUTSELECT
+nrst => row_count~82.OUTPUTSELECT
+nrst => row_count~81.OUTPUTSELECT
+nrst => row_count~80.OUTPUTSELECT
+nrst => row_count~79.OUTPUTSELECT
+nrst => row_count~78.OUTPUTSELECT
+nrst => row_count~77.OUTPUTSELECT
+nrst => row_count~76.OUTPUTSELECT
+nrst => row_count~75.OUTPUTSELECT
+nrst => row_count~74.OUTPUTSELECT
+nrst => row_count~73.OUTPUTSELECT
+nrst => row_count~72.OUTPUTSELECT
+nrst => row_count~71.OUTPUTSELECT
+nrst => row_count~70.OUTPUTSELECT
+nrst => row_count~69.OUTPUTSELECT
+nrst => row_count~68.OUTPUTSELECT
+nrst => row_count~67.OUTPUTSELECT
+nrst => row_count~66.OUTPUTSELECT
+nrst => row_count~65.OUTPUTSELECT
+nrst => row_count~64.OUTPUTSELECT
+column_updown => column_count~128.OUTPUTSELECT
+column_updown => column_count~129.OUTPUTSELECT
+column_updown => column_count~130.OUTPUTSELECT
+column_updown => column_count~131.OUTPUTSELECT
+column_updown => column_count~132.OUTPUTSELECT
+column_updown => column_count~133.OUTPUTSELECT
+column_updown => column_count~134.OUTPUTSELECT
+column_updown => column_count~135.OUTPUTSELECT
+column_updown => column_count~136.OUTPUTSELECT
+column_updown => column_count~137.OUTPUTSELECT
+column_updown => column_count~138.OUTPUTSELECT
+column_updown => column_count~139.OUTPUTSELECT
+column_updown => column_count~140.OUTPUTSELECT
+column_updown => column_count~141.OUTPUTSELECT
+column_updown => column_count~142.OUTPUTSELECT
+column_updown => column_count~143.OUTPUTSELECT
+column_updown => column_count~144.OUTPUTSELECT
+column_updown => column_count~145.OUTPUTSELECT
+column_updown => column_count~146.OUTPUTSELECT
+column_updown => column_count~147.OUTPUTSELECT
+column_updown => column_count~148.OUTPUTSELECT
+column_updown => column_count~149.OUTPUTSELECT
+column_updown => column_count~150.OUTPUTSELECT
+column_updown => column_count~151.OUTPUTSELECT
+column_updown => column_count~152.OUTPUTSELECT
+column_updown => column_count~153.OUTPUTSELECT
+column_updown => column_count~154.OUTPUTSELECT
+column_updown => column_count~155.OUTPUTSELECT
+column_updown => column_count~156.OUTPUTSELECT
+column_updown => column_count~157.OUTPUTSELECT
+column_updown => column_count~158.OUTPUTSELECT
+column_updown => column_count~159.OUTPUTSELECT
+column_en => column_count~31.OUTPUTSELECT
+column_en => column_count~30.OUTPUTSELECT
+column_en => column_count~29.OUTPUTSELECT
+column_en => column_count~28.OUTPUTSELECT
+column_en => column_count~27.OUTPUTSELECT
+column_en => column_count~26.OUTPUTSELECT
+column_en => column_count~25.OUTPUTSELECT
+column_en => column_count~24.OUTPUTSELECT
+column_en => column_count~23.OUTPUTSELECT
+column_en => column_count~22.OUTPUTSELECT
+column_en => column_count~21.OUTPUTSELECT
+column_en => column_count~20.OUTPUTSELECT
+column_en => column_count~19.OUTPUTSELECT
+column_en => column_count~18.OUTPUTSELECT
+column_en => column_count~17.OUTPUTSELECT
+column_en => column_count~16.OUTPUTSELECT
+column_en => column_count~15.OUTPUTSELECT
+column_en => column_count~14.OUTPUTSELECT
+column_en => column_count~13.OUTPUTSELECT
+column_en => column_count~12.OUTPUTSELECT
+column_en => column_count~11.OUTPUTSELECT
+column_en => column_count~10.OUTPUTSELECT
+column_en => column_count~9.OUTPUTSELECT
+column_en => column_count~8.OUTPUTSELECT
+column_en => column_count~7.OUTPUTSELECT
+column_en => column_count~6.OUTPUTSELECT
+column_en => column_count~5.OUTPUTSELECT
+column_en => column_count~4.OUTPUTSELECT
+column_en => column_count~3.OUTPUTSELECT
+column_en => column_count~2.OUTPUTSELECT
+column_en => column_count~1.OUTPUTSELECT
+column_en => column_count~0.OUTPUTSELECT
+row_updown => row_count~0.OUTPUTSELECT
+row_updown => row_count~1.OUTPUTSELECT
+row_updown => row_count~2.OUTPUTSELECT
+row_updown => row_count~3.OUTPUTSELECT
+row_updown => row_count~4.OUTPUTSELECT
+row_updown => row_count~5.OUTPUTSELECT
+row_updown => row_count~6.OUTPUTSELECT
+row_updown => row_count~7.OUTPUTSELECT
+row_updown => row_count~8.OUTPUTSELECT
+row_updown => row_count~9.OUTPUTSELECT
+row_updown => row_count~10.OUTPUTSELECT
+row_updown => row_count~11.OUTPUTSELECT
+row_updown => row_count~12.OUTPUTSELECT
+row_updown => row_count~13.OUTPUTSELECT
+row_updown => row_count~14.OUTPUTSELECT
+row_updown => row_count~15.OUTPUTSELECT
+row_updown => row_count~16.OUTPUTSELECT
+row_updown => row_count~17.OUTPUTSELECT
+row_updown => row_count~18.OUTPUTSELECT
+row_updown => row_count~19.OUTPUTSELECT
+row_updown => row_count~20.OUTPUTSELECT
+row_updown => row_count~21.OUTPUTSELECT
+row_updown => row_count~22.OUTPUTSELECT
+row_updown => row_count~23.OUTPUTSELECT
+row_updown => row_count~24.OUTPUTSELECT
+row_updown => row_count~25.OUTPUTSELECT
+row_updown => row_count~26.OUTPUTSELECT
+row_updown => row_count~27.OUTPUTSELECT
+row_updown => row_count~28.OUTPUTSELECT
+row_updown => row_count~29.OUTPUTSELECT
+row_updown => row_count~30.OUTPUTSELECT
+row_updown => row_count~31.OUTPUTSELECT
+row_en => row_count~63.OUTPUTSELECT
+row_en => row_count~62.OUTPUTSELECT
+row_en => row_count~61.OUTPUTSELECT
+row_en => row_count~60.OUTPUTSELECT
+row_en => row_count~59.OUTPUTSELECT
+row_en => row_count~58.OUTPUTSELECT
+row_en => row_count~57.OUTPUTSELECT
+row_en => row_count~56.OUTPUTSELECT
+row_en => row_count~55.OUTPUTSELECT
+row_en => row_count~54.OUTPUTSELECT
+row_en => row_count~53.OUTPUTSELECT
+row_en => row_count~52.OUTPUTSELECT
+row_en => row_count~51.OUTPUTSELECT
+row_en => row_count~50.OUTPUTSELECT
+row_en => row_count~49.OUTPUTSELECT
+row_en => row_count~48.OUTPUTSELECT
+row_en => row_count~47.OUTPUTSELECT
+row_en => row_count~46.OUTPUTSELECT
+row_en => row_count~45.OUTPUTSELECT
+row_en => row_count~44.OUTPUTSELECT
+row_en => row_count~43.OUTPUTSELECT
+row_en => row_count~42.OUTPUTSELECT
+row_en => row_count~41.OUTPUTSELECT
+row_en => row_count~40.OUTPUTSELECT
+row_en => row_count~39.OUTPUTSELECT
+row_en => row_count~38.OUTPUTSELECT
+row_en => row_count~37.OUTPUTSELECT
+row_en => row_count~36.OUTPUTSELECT
+row_en => row_count~35.OUTPUTSELECT
+row_en => row_count~34.OUTPUTSELECT
+row_en => row_count~33.OUTPUTSELECT
+row_en => row_count~32.OUTPUTSELECT
+row[0] => LessThan1.IN32
+row[0] => LessThan0.IN63
+row[1] => LessThan1.IN31
+row[1] => LessThan0.IN62
+row[2] => LessThan1.IN30
+row[2] => LessThan0.IN61
+row[3] => LessThan1.IN29
+row[3] => LessThan0.IN60
+row[4] => LessThan1.IN28
+row[4] => LessThan0.IN59
+row[5] => LessThan1.IN27
+row[5] => LessThan0.IN58
+row[6] => LessThan1.IN26
+row[6] => LessThan0.IN57
+row[7] => LessThan1.IN25
+row[7] => LessThan0.IN56
+row[8] => LessThan1.IN24
+row[8] => LessThan0.IN55
+row[9] => LessThan1.IN23
+row[9] => LessThan0.IN54
+column[0] => LessThan3.IN32
+column[0] => LessThan2.IN63
+column[1] => LessThan3.IN31
+column[1] => LessThan2.IN62
+column[2] => LessThan3.IN30
+column[2] => LessThan2.IN61
+column[3] => LessThan3.IN29
+column[3] => LessThan2.IN60
+column[4] => LessThan3.IN28
+column[4] => LessThan2.IN59
+column[5] => LessThan3.IN27
+column[5] => LessThan2.IN58
+column[6] => LessThan3.IN26
+column[6] => LessThan2.IN57
+column[7] => LessThan3.IN25
+column[7] => LessThan2.IN56
+column[8] => LessThan3.IN24
+column[8] => LessThan2.IN55
+column[9] => LessThan3.IN23
+column[9] => LessThan2.IN54
+s <= always0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|divfreq:inst4
+input_clk => temporal.CLK
+input_clk => counter[16].CLK
+input_clk => counter[15].CLK
+input_clk => counter[14].CLK
+input_clk => counter[13].CLK
+input_clk => counter[12].CLK
+input_clk => counter[11].CLK
+input_clk => counter[10].CLK
+input_clk => counter[9].CLK
+input_clk => counter[8].CLK
+input_clk => counter[7].CLK
+input_clk => counter[6].CLK
+input_clk => counter[5].CLK
+input_clk => counter[4].CLK
+input_clk => counter[3].CLK
+input_clk => counter[2].CLK
+input_clk => counter[1].CLK
+input_clk => counter[0].CLK
+input_clk => temporal2.CLK
+input_clk => counter2[19].CLK
+input_clk => counter2[18].CLK
+input_clk => counter2[17].CLK
+input_clk => counter2[16].CLK
+input_clk => counter2[15].CLK
+input_clk => counter2[14].CLK
+input_clk => counter2[13].CLK
+input_clk => counter2[12].CLK
+input_clk => counter2[11].CLK
+input_clk => counter2[10].CLK
+input_clk => counter2[9].CLK
+input_clk => counter2[8].CLK
+input_clk => counter2[7].CLK
+input_clk => counter2[6].CLK
+input_clk => counter2[5].CLK
+input_clk => counter2[4].CLK
+input_clk => counter2[3].CLK
+input_clk => counter2[2].CLK
+input_clk => counter2[1].CLK
+input_clk => counter2[0].CLK
+nrst => counter[0].ACLR
+nrst => counter[1].ACLR
+nrst => counter[2].ACLR
+nrst => counter[3].ACLR
+nrst => counter[4].ACLR
+nrst => counter[5].ACLR
+nrst => counter[6].ACLR
+nrst => counter[7].ACLR
+nrst => counter[8].ACLR
+nrst => counter[9].ACLR
+nrst => counter[10].ACLR
+nrst => counter[11].ACLR
+nrst => counter[12].ACLR
+nrst => counter[13].ACLR
+nrst => counter[14].ACLR
+nrst => counter[15].ACLR
+nrst => counter[16].ACLR
+nrst => temporal.ACLR
+nrst => temporal2.ACLR
+nrst => counter2[19].ACLR
+nrst => counter2[18].ACLR
+nrst => counter2[17].ACLR
+nrst => counter2[16].ACLR
+nrst => counter2[15].ACLR
+nrst => counter2[14].ACLR
+nrst => counter2[13].ACLR
+nrst => counter2[12].ACLR
+nrst => counter2[11].ACLR
+nrst => counter2[10].ACLR
+nrst => counter2[9].ACLR
+nrst => counter2[8].ACLR
+nrst => counter2[7].ACLR
+nrst => counter2[6].ACLR
+nrst => counter2[5].ACLR
+nrst => counter2[4].ACLR
+nrst => counter2[3].ACLR
+nrst => counter2[2].ACLR
+nrst => counter2[1].ACLR
+nrst => counter2[0].ACLR
+output_clk1 <= temporal.DB_MAX_OUTPUT_PORT_TYPE
+output_clk2 <= temporal2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|carro1:inst7
+clk => column_count[31].CLK
+clk => column_count[30].CLK
+clk => column_count[29].CLK
+clk => column_count[28].CLK
+clk => column_count[27].CLK
+clk => column_count[26].CLK
+clk => column_count[25].CLK
+clk => column_count[24].CLK
+clk => column_count[23].CLK
+clk => column_count[22].CLK
+clk => column_count[21].CLK
+clk => column_count[20].CLK
+clk => column_count[19].CLK
+clk => column_count[18].CLK
+clk => column_count[17].CLK
+clk => column_count[16].CLK
+clk => column_count[15].CLK
+clk => column_count[14].CLK
+clk => column_count[13].CLK
+clk => column_count[12].CLK
+clk => column_count[11].CLK
+clk => column_count[10].CLK
+clk => column_count[9].CLK
+clk => column_count[8].CLK
+clk => column_count[7].CLK
+clk => column_count[6].CLK
+clk => column_count[5].CLK
+clk => column_count[4].CLK
+clk => column_count[3].CLK
+clk => column_count[2].CLK
+clk => column_count[1].CLK
+clk => column_count[0].CLK
+nrst => column_count~31.OUTPUTSELECT
+nrst => column_count~30.OUTPUTSELECT
+nrst => column_count~29.OUTPUTSELECT
+nrst => column_count~28.OUTPUTSELECT
+nrst => column_count~27.OUTPUTSELECT
+nrst => column_count~26.OUTPUTSELECT
+nrst => column_count~25.OUTPUTSELECT
+nrst => column_count~24.OUTPUTSELECT
+nrst => column_count~23.OUTPUTSELECT
+nrst => column_count~22.OUTPUTSELECT
+nrst => column_count~21.OUTPUTSELECT
+nrst => column_count~20.OUTPUTSELECT
+nrst => column_count~19.OUTPUTSELECT
+nrst => column_count~18.OUTPUTSELECT
+nrst => column_count~17.OUTPUTSELECT
+nrst => column_count~16.OUTPUTSELECT
+nrst => column_count~15.OUTPUTSELECT
+nrst => column_count~14.OUTPUTSELECT
+nrst => column_count~13.OUTPUTSELECT
+nrst => column_count~12.OUTPUTSELECT
+nrst => column_count~11.OUTPUTSELECT
+nrst => column_count~10.OUTPUTSELECT
+nrst => column_count~9.OUTPUTSELECT
+nrst => column_count~8.OUTPUTSELECT
+nrst => column_count~7.OUTPUTSELECT
+nrst => column_count~6.OUTPUTSELECT
+nrst => column_count~5.OUTPUTSELECT
+nrst => column_count~4.OUTPUTSELECT
+nrst => column_count~3.OUTPUTSELECT
+nrst => column_count~2.OUTPUTSELECT
+nrst => column_count~1.OUTPUTSELECT
+nrst => column_count~0.OUTPUTSELECT
+row[0] => LessThan1.IN64
+row[0] => LessThan0.IN64
+row[1] => LessThan1.IN63
+row[1] => LessThan0.IN63
+row[2] => LessThan1.IN62
+row[2] => LessThan0.IN62
+row[3] => LessThan1.IN61
+row[3] => LessThan0.IN61
+row[4] => LessThan1.IN60
+row[4] => LessThan0.IN60
+row[5] => LessThan1.IN59
+row[5] => LessThan0.IN59
+row[6] => LessThan1.IN58
+row[6] => LessThan0.IN58
+row[7] => LessThan1.IN57
+row[7] => LessThan0.IN57
+row[8] => LessThan1.IN56
+row[8] => LessThan0.IN56
+row[9] => LessThan1.IN55
+row[9] => LessThan0.IN55
+column[0] => LessThan3.IN32
+column[0] => LessThan2.IN63
+column[1] => LessThan3.IN31
+column[1] => LessThan2.IN62
+column[2] => LessThan3.IN30
+column[2] => LessThan2.IN61
+column[3] => LessThan3.IN29
+column[3] => LessThan2.IN60
+column[4] => LessThan3.IN28
+column[4] => LessThan2.IN59
+column[5] => LessThan3.IN27
+column[5] => LessThan2.IN58
+column[6] => LessThan3.IN26
+column[6] => LessThan2.IN57
+column[7] => LessThan3.IN25
+column[7] => LessThan2.IN56
+column[8] => LessThan3.IN24
+column[8] => LessThan2.IN55
+column[9] => LessThan3.IN23
+column[9] => LessThan2.IN54
+s <= always0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|controle:inst24
+cima => state~15.OUTPUTSELECT
+cima => state~14.OUTPUTSELECT
+cima => state~13.OUTPUTSELECT
+cima => state~12.OUTPUTSELECT
+baixo => state~11.OUTPUTSELECT
+baixo => state~10.OUTPUTSELECT
+baixo => state~9.OUTPUTSELECT
+baixo => state~8.OUTPUTSELECT
+esquerda => state~7.OUTPUTSELECT
+esquerda => state~6.OUTPUTSELECT
+esquerda => state~5.OUTPUTSELECT
+esquerda => state~4.OUTPUTSELECT
+direita => state~3.OUTPUTSELECT
+direita => state~2.OUTPUTSELECT
+direita => state~1.OUTPUTSELECT
+direita => state~0.OUTPUTSELECT
+data_out[0] <= data_out~0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|input_synchronizer:inst13
+clk => sync_reg.CLK
+clk => sync_output~reg0.CLK
+async_input => sync_reg.DATAIN
+sync_output <= sync_output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst9
+pb_1 => pb_1~0.IN1
+clk => clk~0.IN1
+pb_out <= pb_out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst9|clock_div:u1
+Clk_25M => counter[15].CLK
+Clk_25M => counter[14].CLK
+Clk_25M => counter[13].CLK
+Clk_25M => counter[12].CLK
+Clk_25M => counter[11].CLK
+Clk_25M => counter[10].CLK
+Clk_25M => counter[9].CLK
+Clk_25M => counter[8].CLK
+Clk_25M => counter[7].CLK
+Clk_25M => counter[6].CLK
+Clk_25M => counter[5].CLK
+Clk_25M => counter[4].CLK
+Clk_25M => counter[3].CLK
+Clk_25M => counter[2].CLK
+Clk_25M => counter[1].CLK
+Clk_25M => counter[0].CLK
+Clk_25M => slow_clk~reg0.CLK
+slow_clk <= slow_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst9|my_dff:d1
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst9|my_dff:d2
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|input_synchronizer:inst14
+clk => sync_reg.CLK
+clk => sync_output~reg0.CLK
+async_input => sync_reg.DATAIN
+sync_output <= sync_output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst11
+pb_1 => pb_1~0.IN1
+clk => clk~0.IN1
+pb_out <= pb_out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst11|clock_div:u1
+Clk_25M => counter[15].CLK
+Clk_25M => counter[14].CLK
+Clk_25M => counter[13].CLK
+Clk_25M => counter[12].CLK
+Clk_25M => counter[11].CLK
+Clk_25M => counter[10].CLK
+Clk_25M => counter[9].CLK
+Clk_25M => counter[8].CLK
+Clk_25M => counter[7].CLK
+Clk_25M => counter[6].CLK
+Clk_25M => counter[5].CLK
+Clk_25M => counter[4].CLK
+Clk_25M => counter[3].CLK
+Clk_25M => counter[2].CLK
+Clk_25M => counter[1].CLK
+Clk_25M => counter[0].CLK
+Clk_25M => slow_clk~reg0.CLK
+slow_clk <= slow_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst11|my_dff:d1
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst11|my_dff:d2
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|input_synchronizer:inst21
+clk => sync_reg.CLK
+clk => sync_output~reg0.CLK
+async_input => sync_reg.DATAIN
+sync_output <= sync_output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst12
+pb_1 => pb_1~0.IN1
+clk => clk~0.IN1
+pb_out <= pb_out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst12|clock_div:u1
+Clk_25M => counter[15].CLK
+Clk_25M => counter[14].CLK
+Clk_25M => counter[13].CLK
+Clk_25M => counter[12].CLK
+Clk_25M => counter[11].CLK
+Clk_25M => counter[10].CLK
+Clk_25M => counter[9].CLK
+Clk_25M => counter[8].CLK
+Clk_25M => counter[7].CLK
+Clk_25M => counter[6].CLK
+Clk_25M => counter[5].CLK
+Clk_25M => counter[4].CLK
+Clk_25M => counter[3].CLK
+Clk_25M => counter[2].CLK
+Clk_25M => counter[1].CLK
+Clk_25M => counter[0].CLK
+Clk_25M => slow_clk~reg0.CLK
+slow_clk <= slow_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst12|my_dff:d1
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst12|my_dff:d2
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|input_synchronizer:inst23
+clk => sync_reg.CLK
+clk => sync_output~reg0.CLK
+async_input => sync_reg.DATAIN
+sync_output <= sync_output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst20
+pb_1 => pb_1~0.IN1
+clk => clk~0.IN1
+pb_out <= pb_out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst20|clock_div:u1
+Clk_25M => counter[15].CLK
+Clk_25M => counter[14].CLK
+Clk_25M => counter[13].CLK
+Clk_25M => counter[12].CLK
+Clk_25M => counter[11].CLK
+Clk_25M => counter[10].CLK
+Clk_25M => counter[9].CLK
+Clk_25M => counter[8].CLK
+Clk_25M => counter[7].CLK
+Clk_25M => counter[6].CLK
+Clk_25M => counter[5].CLK
+Clk_25M => counter[4].CLK
+Clk_25M => counter[3].CLK
+Clk_25M => counter[2].CLK
+Clk_25M => counter[1].CLK
+Clk_25M => counter[0].CLK
+Clk_25M => slow_clk~reg0.CLK
+slow_clk <= slow_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst20|my_dff:d1
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freeway|debounce:inst20|my_dff:d2
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

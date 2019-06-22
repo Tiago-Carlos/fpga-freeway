@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="freeway">
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|VGAdrive:inst|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_ooh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|carro1:inst7|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_roh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|VGAdrive:inst|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_ooh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|carro1:inst7|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_soh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|divfreq:inst4|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_voh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|galinha:inst5|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_roh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|galinha:inst5|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_gji.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|galinha:inst5|lpm_add_sub:Add4" CBX_FILE_NAME="add_sub_gji.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|divfreq:inst4|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_poh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|galinha:inst5|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_roh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

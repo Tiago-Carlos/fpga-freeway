@@ -1,5 +1,5 @@
 Flow report for freeway
-Sat Jun 22 13:44:01 2019
+Thu Jun 27 12:31:54 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,16 +38,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Flow Summary                                                           ;
 +-------------------------+----------------------------------------------+
-; Flow Status             ; Successful - Sat Jun 22 13:44:01 2019        ;
+; Flow Status             ; Successful - Thu Jun 27 12:31:54 2019        ;
 ; Quartus II Version      ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name           ; freeway                                      ;
 ; Top-level Entity Name   ; freeway                                      ;
 ; Family                  ; FLEX10K                                      ;
 ; Device                  ; EPF10K20RC240-4                              ;
 ; Timing Models           ; Final                                        ;
-; Met timing requirements ; No                                           ;
-; Total logic elements    ; 803 / 1,152 ( 70 % )                         ;
-; Total pins              ; 10 / 189 ( 5 % )                             ;
+; Met timing requirements ; Yes                                          ;
+; Total logic elements    ; 666 / 1,152 ( 58 % )                         ;
+; Total pins              ; 8 / 189 ( 4 % )                              ;
 ; Total memory bits       ; 0 / 12,288 ( 0 % )                           ;
 +-------------------------+----------------------------------------------+
 
@@ -57,22 +57,23 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/22/2019 13:43:49 ;
+; Start date & time ; 06/27/2019 12:31:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; freeway             ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                   ;
-+------------------------------------+--------------------------------+---------------+-------------+----------------+
-; Assignment Name                    ; Value                          ; Default Value ; Entity Name ; Section Id     ;
-+------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 53164088670191.156122182911460 ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                             ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                              ; --            ; --          ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                            ; --            ; --          ; eda_blast_fpga ;
-+------------------------------------+--------------------------------+---------------+-------------+----------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                      ;
++------------------------------------+---------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                                             ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+---------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 141761624247956.156164950202208                   ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                                ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/Users/tiago/Desktop/freeway-master/freeway.dpf ; --            ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                               ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+---------------------------------------------------+---------------+-------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -80,11 +81,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:04     ; 1.0                     ; 253 MB              ; 00:00:03                           ;
-; Fitter                  ; 00:00:05     ; 1.0                     ; 208 MB              ; 00:00:05                           ;
-; Assembler               ; 00:00:00     ; 1.0                     ; 200 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 168 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:09     ; --                      ; --                  ; 00:00:08                           ;
+; Analysis & Synthesis    ; 00:00:04     ; 1.0                     ; 250 MB              ; 00:00:03                           ;
+; Fitter                  ; 00:00:04     ; 1.0                     ; 205 MB              ; 00:00:04                           ;
+; Assembler               ; 00:00:00     ; 1.0                     ; 199 MB              ; 00:00:00                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 167 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:08     ; --                      ; --                  ; 00:00:07                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -93,10 +94,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; DESKTOP-GKLH0TH  ; Windows Vista ; 6.2        ; x86_64         ;
-; Fitter                  ; DESKTOP-GKLH0TH  ; Windows Vista ; 6.2        ; x86_64         ;
-; Assembler               ; DESKTOP-GKLH0TH  ; Windows Vista ; 6.2        ; x86_64         ;
-; Classic Timing Analyzer ; DESKTOP-GKLH0TH  ; Windows Vista ; 6.2        ; x86_64         ;
+; Analysis & Synthesis    ; DESKTOP-CC3MR8H  ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; DESKTOP-CC3MR8H  ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; DESKTOP-CC3MR8H  ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; DESKTOP-CC3MR8H  ; Windows Vista ; 6.2        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 

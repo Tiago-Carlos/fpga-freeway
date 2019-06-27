@@ -1,10 +1,10 @@
-Fitter Status : Successful - Sat Jun 22 13:43:59 2019
+Fitter Status : Successful - Thu Jun 27 12:31:51 2019
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
 Revision Name : freeway
 Top-level Entity Name : freeway
 Family : FLEX10K
 Device : EPF10K20RC240-4
 Timing Models : Final
-Total logic elements : 803 / 1,152 ( 70 % )
-Total pins : 10 / 189 ( 5 % )
+Total logic elements : 666 / 1,152 ( 58 % )
+Total pins : 8 / 189 ( 4 % )
 Total memory bits : 0 / 12,288 ( 0 % )

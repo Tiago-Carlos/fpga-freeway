@@ -27,7 +27,7 @@ module render (clk, cima, baixo, row, column, saida_galinha, saida_carro);
 			saida_galinha = 1;
 		else
 			saida_galinha = 0;
-			
+
 		/*Renderizar veiculos*/
 		if ((row < linha_carro1 + 40 & linha_carro1 < row & column < coluna_carro1 + 60 & coluna_carro1 < column)
 			|| (row < linha_carro2 + 40 & linha_carro2 < row & column < coluna_carro2 + 60 & coluna_carro2 < column)
@@ -37,6 +37,7 @@ module render (clk, cima, baixo, row, column, saida_galinha, saida_carro);
 		else 
 			saida_carro = 0;
 
+		/*Tratamento de colisão*/
 		if ((saida_carro == 1) && (saida_galinha == 1))
 			reset = 1;
 	end
@@ -53,11 +54,11 @@ module render (clk, cima, baixo, row, column, saida_galinha, saida_carro);
 		else if(baixo == 1)
 			linha_galinha = linha_galinha + 60;
 				
-		if(linha_galinha >= 480) 
+		if(linha_galinha > 435) 
 			linha_galinha = 435;
 			
 		else if(linha_galinha <= 0)
-			linha_galinha = linha_galinha;
+			linha_galinha = 435;
 	end
 	
 	always @(posedge clk)
@@ -80,7 +81,7 @@ module render (clk, cima, baixo, row, column, saida_galinha, saida_carro);
 		if (coluna_carro3 <= 0)
 			coluna_carro3 = 640;
 
-		/*Carro 1 começa na direita da tela, e se move pra esquerda*/
+		/*A moto começa na direita da tela, e se move pra esquerda*/
 		/*Velocidade 4*/
 		coluna_moto = coluna_moto + 4;
 		if (coluna_moto <= 0)
@@ -90,10 +91,3 @@ module render (clk, cima, baixo, row, column, saida_galinha, saida_carro);
 	
 	
 endmodule 
-
-/*
-	4'b0011 FRENTE
-	4'b1100 BAIXO
-	4'b0001 TRAS
-	4'b0100 CIMA
-*/

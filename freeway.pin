@@ -36,7 +36,7 @@
  ------------------------------------------------------------------------------
 
 
-File Generation Date & Time: Thu Jun 27 12:31:51 2019
+File Generation Date & Time: Fri Jun 28 12:48:49 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 CHIP  "freeway"  ASSIGNED TO AN: EPF10K20RC240-4
 
@@ -69,8 +69,8 @@ GND*                         : 24        :        :                   :         
 GND*                         : 25        :        :                   :         :           :                
 GND*                         : 26        :        :                   :         :           :                
 VCC_INT                      : 27        : power  :                   : 5.0V    :           :                
-GND*                         : 28        :        :                   :         :           :                
-GND*                         : 29        :        :                   :         :           :                
+Baixo                        : 28        : input  : TTL               :         :           : Y              
+Cima                         : 29        : input  : TTL               :         :           : Y              
 GND*                         : 30        :        :                   :         :           :                
 GND*                         : 31        :        :                   :         :           :                
 GND_INT                      : 32        : gnd    :                   :         :           :                
@@ -131,7 +131,7 @@ GND*                         : 86        :        :                   :         
 GND*                         : 87        :        :                   :         :           :                
 GND*                         : 88        :        :                   :         :           :                
 VCC_INT                      : 89        : power  :                   : 5.0V    :           :                
-Cima                         : 90        : input  : TTL               :         :           : N              
+GND+                         : 90        :        :                   :         :           :                
 clock                        : 91        : input  : TTL               :         :           : Y              
 GND+                         : 92        :        :                   :         :           :                
 GND_INT                      : 93        : gnd    :                   :         :           :                
@@ -251,7 +251,7 @@ GND*                         : 206       :        :                   :         
 GND*                         : 207       :        :                   :         :           :                
 GND*                         : 208       :        :                   :         :           :                
 GND*                         : 209       :        :                   :         :           :                
-Baixo                        : 210       : input  : TTL               :         :           : N              
+GND+                         : 210       :        :                   :         :           :                
 GND+                         : 211       :        :                   :         :           :                
 GND+                         : 212       :        :                   :         :           :                
 GND*                         : 213       :        :                   :         :           :                

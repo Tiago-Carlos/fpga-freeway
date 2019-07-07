@@ -56,3 +56,5 @@ set_location_assignment PIN_91 -to clock
 set_global_assignment -name MISC_FILE "C:/Users/tiago/Desktop/freeway-master/freeway.dpf"
 set_location_assignment PIN_28 -to Baixo
 set_location_assignment PIN_29 -to Cima
+set_global_assignment -name MISC_FILE "C:/Users/Monitor/Desktop/freeway-master/freeway.dpf"
+set_global_assignment -name BDF_FILE freeway.bdf

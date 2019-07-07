@@ -2,15 +2,17 @@
 <LOG_ROOT>
 	<PROJECT NAME="freeway">
 		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|VGAdrive:inst|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_ooh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add12" CBX_FILE_NAME="add_sub_1eh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add3" CBX_FILE_NAME="add_sub_qoh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add7" CBX_FILE_NAME="add_sub_qoh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add12" CBX_FILE_NAME="add_sub_7eh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add3" CBX_FILE_NAME="add_sub_8eh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|VGAdrive:inst|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_ooh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|divfreq:inst4|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_voh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add13" CBX_FILE_NAME="add_sub_roh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add15" CBX_FILE_NAME="add_sub_qoh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add14" CBX_FILE_NAME="add_sub_2eh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add5" CBX_FILE_NAME="add_sub_qoh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add9" CBX_FILE_NAME="add_sub_qoh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_1eh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add8" CBX_FILE_NAME="add_sub_qoh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|divfreq:inst4|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_poh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_soh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add10" CBX_FILE_NAME="add_sub_qoh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add11" CBX_FILE_NAME="add_sub_8eh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_2eh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|freeway|render:inst1|lpm_add_sub:Add6" CBX_FILE_NAME="add_sub_qoh.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

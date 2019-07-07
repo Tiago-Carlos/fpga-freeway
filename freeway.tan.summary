@@ -2,21 +2,41 @@
 Timing Analyzer Summary
 --------------------------------------------------------------------------------------
 
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.200 ns
+From           : Baixo
+To             : debounce:inst11|my_dff:d1|Q
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 15.200 ns
-From           : VGAdrive:inst|H
-To             : H
+Actual Time    : 18.400 ns
+From           : inst3
+To             : Rout
 From Clock     : clock
 To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.300 ns
+From           : Baixo
+To             : debounce:inst11|my_dff:d1|Q
+From Clock     : --
+To Clock       : clock
 Failed Paths   : 0
 
 Type           : Clock Setup: 'clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 22.47 MHz ( period = 44.500 ns )
-From           : render:inst1|coluna_carro3[3]
+Actual Time    : 21.23 MHz ( period = 47.100 ns )
+From           : render:inst1|coluna_carro3[4]
 To             : inst5
 From Clock     : clock
 To Clock       : clock

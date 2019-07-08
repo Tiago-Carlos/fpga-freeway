@@ -1,8 +1,8 @@
-module render (clk, cima, baixo, row, column, saida_galinha, saida_carro);
+module render (clk, cima, baixo, row, column, saida_galinha, saida_carro, clk2);
 	
 	/*640 x 480 é a resolução do kit*/
 	
-	input clk, cima, baixo;
+	input clk, cima, baixo, clk2;
 	input [9:0] row, column;
 	output reg saida_galinha, saida_carro;
 	integer reset = 0;
@@ -13,6 +13,8 @@ module render (clk, cima, baixo, row, column, saida_galinha, saida_carro);
 	/**/
 	integer coluna_carro1 = 600;
 	integer linha_carro1 = 60;
+	integer coluna_carro1_2 = 300;
+	integer linha_carro1_2 = 60;
 	
 	integer coluna_carro2 = 0;
 	integer linha_carro2 = 180;
@@ -27,11 +29,17 @@ module render (clk, cima, baixo, row, column, saida_galinha, saida_carro);
 		coluna_carro1 = coluna_carro1 - 2;
 		if (coluna_carro1 <= 0)
 			coluna_carro1 = 640;
+			
+		/*Carro 1_2 começa na direita da tela, e se move pra esquerda*/
+		/*Velocidade 2*/
+		coluna_carro1_2 = coluna_carro1_2 - 2;
+		if (coluna_carro1_2 <= 0)
+			coluna_carro1_2 = 640;
 
 		/*Carro 2 começa na esquerda da tela, e se move pra direita*/
 		/*Velocidade 3*/
 		coluna_carro2 = coluna_carro2 + 3;
-		if (coluna_carro2 >= 640)
+		if (coluna_carro2+120 >= 640)
 			coluna_carro2 = 0;
 
 		/*Carro 3 começa na direita da tela, e se move pra esquerda*/
@@ -50,23 +58,36 @@ module render (clk, cima, baixo, row, column, saida_galinha, saida_carro);
 			saida_galinha = 0;
 
 		/*Renderizar veiculos*/
-		if ((row < linha_carro1 + 60 & linha_carro1 < row & column < coluna_carro1 + 60 & coluna_carro1 < column)
-			| (row < linha_carro2 + 60 & linha_carro2 < row & column < coluna_carro2 + 60 & coluna_carro2 < column)
-			| (row < linha_carro3 + 60 & linha_carro3 < row & column < coluna_carro3 + 60 & coluna_carro3 < column))
+		if ((row < linha_carro1 + 60 & linha_carro1 < row & column < coluna_carro1 + 120 & coluna_carro1 < column)
+			| (row < linha_carro1_2 + 60 & linha_carro1_2 < row & column < coluna_carro1_2 + 120 & coluna_carro1_2 < column)
+			| (row < linha_carro2 + 60 & linha_carro2 < row & column < coluna_carro2 + 120 & coluna_carro2 < column)
+			| (row < linha_carro3 + 60 & linha_carro3 < row & column < coluna_carro3 + 120 & coluna_carro3 < column)
+			)
 			saida_carro = 1;
 		else 
 			saida_carro = 0;
 
 		/*Tratamento de colisão*/
-		if (((linha_galinha>=linha_carro1 & linha_galinha<=linha_carro1+60) & (coluna_carro1<=coluna_galinha+30 & coluna_carro1>=coluna_galinha | coluna_carro1+60<=coluna_galinha+30 & coluna_carro1+60>=coluna_galinha))
-		| ((linha_galinha>=linha_carro2 & linha_galinha<=linha_carro2+60) & (coluna_carro2<=coluna_galinha+30 & coluna_carro2>=coluna_galinha | coluna_carro2+60<=coluna_galinha+30 & coluna_carro2+60>=coluna_galinha))
-		| ((linha_galinha>=linha_carro3 & linha_galinha<=linha_carro3+60) & (coluna_carro3<=coluna_galinha+30 & coluna_carro3>=coluna_galinha | coluna_carro3+60<=coluna_galinha+30 & coluna_carro3+60>=coluna_galinha)))
+		/*Os testes são: a esquerda da galinha ou a direita da galinha tão entre a esquerda ou direita do carro E o topo e a parte de baixo da galinha tão entre o carro também ocorre a colisão*/
+		if ((((linha_galinha>=linha_carro1 & linha_galinha<=linha_carro1+60) | (linha_galinha+30 >= linha_carro1 & linha_galinha+30<=linha_carro1+60))
+		& ((coluna_galinha>=coluna_carro1 & coluna_galinha<=coluna_carro1+120) | (coluna_galinha+30 >= coluna_carro1 & coluna_galinha+30<=coluna_carro1+120)))
+		|
+		(((linha_galinha>=linha_carro1_2 & linha_galinha<=linha_carro1_2+60) | (linha_galinha+30 >= linha_carro1_2 & linha_galinha+30<=linha_carro1_2+60))
+		& ((coluna_galinha>=coluna_carro1_2 & coluna_galinha<=coluna_carro1_2+120) | (coluna_galinha+30 >= coluna_carro1_2 & coluna_galinha+30<=coluna_carro1_2+120)))
+		|
+		(((linha_galinha>=linha_carro2 & linha_galinha<=linha_carro2+60) | (linha_galinha+30 >= linha_carro2 & linha_galinha+30<=linha_carro2+60))
+		& ((coluna_galinha>=coluna_carro2 & coluna_galinha<=coluna_carro2+120) | (coluna_galinha+30 >= coluna_carro2 & coluna_galinha+30<=coluna_carro2+120)))
+		|
+		(((linha_galinha>=linha_carro3 & linha_galinha<=linha_carro3+60) | (linha_galinha+30 >= linha_carro3 & linha_galinha+30<=linha_carro3+60))
+		& ((coluna_galinha>=coluna_carro3 & coluna_galinha<=coluna_carro3+120) | (coluna_galinha+30 >= coluna_carro3 & coluna_galinha+30<=coluna_carro3+120))))
+		
 			reset = 1;
+
 		else reset = 0;
 	end
 
-	// Controle for linha galinha
-	always @(posedge clk)
+	// Controle pra linha galinha
+	always @(posedge clk2)
 	begin
 		if(reset == 1) linha_galinha = 435;
 			

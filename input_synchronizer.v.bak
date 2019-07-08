@@ -1,0 +1,23 @@
+module input_synchronizer(input clk, async_input, output reg sync_output);
+
+	reg sync_reg;
+	
+		
+	architecture Behavioral of input_synchronizer is
+	signal counter: integer range 0 to 1000 := 0;
+	begin
+		divf1: process (nrst, input_clk) begin
+        if (nrst = '0') then
+            temporal <= '0';
+            counter <= 0;
+        elsif rising_edge(input_clk) then
+            if (counter = 83894) then
+                temporal <= NOT(temporal);
+                counter <= 0;
+            else
+                counter <= counter+1;
+            end if;
+        end if;
+    end process;
+	end Behavioral;
+endmodule 
